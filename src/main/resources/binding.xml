@@ -1,0 +1,6 @@
+<binding>
+    <mapping name="person" class="org.example.Person">
+        <value name="name" field="name" style="element"/>
+        <value name="age" field="age" style="element"/>
+    </mapping>
+</binding>

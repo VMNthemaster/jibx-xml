@@ -1,0 +1,15 @@
+<HotelSettingUpdateRQ>
+    <HotelID>1098</HotelID>
+    <Settings>
+        <Setting>
+            <SettingName>Enable Family Pricing</SettingName>
+            <SettingID>1</SettingID>
+            <SettingValue>true</SettingValue>
+        </Setting>
+        <Setting>
+            <SettingName>Disable Extended Hold</SettingName>
+            <SettingID>2</SettingID>
+            <SettingValue>false</SettingValue>
+        </Setting>
+    </Settings>
+</HotelSettingUpdateRQ>

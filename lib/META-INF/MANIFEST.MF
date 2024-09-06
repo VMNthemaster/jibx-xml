@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Build-Jdk-Spec: 17
+Specification-Title: Apache Commons BCEL
+Specification-Version: 6.10
+Specification-Vendor: The Apache Software Foundation
+Implementation-Title: Apache Commons BCEL
+Implementation-Version: 6.10.0
+Implementation-Vendor: The Apache Software Foundation
+Automatic-Module-Name: org.apache.bcel
+Bundle-Description: Apache Commons Bytecode Engineering Library
+Bundle-DocURL: https://commons.apache.org/proper/commons-bcel
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Commons BCEL
+Bundle-SymbolicName: org.apache.bcel
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 6.10.0
+Export-Package: org.apache.bcel;version="6.10.0",org.apache.bcel.classfi
+ le;version="6.10.0",org.apache.bcel.generic;version="6.10.0",org.apache
+ .bcel.util;version="6.10.0",org.apache.bcel.verifier;version="6.10.0",o
+ rg.apache.bcel.verifier.exc;version="6.10.0",org.apache.bcel.verifier.s
+ tatics;version="6.10.0",org.apache.bcel.verifier.structurals;version="6
+ .10.0"
+Import-Package: javax.swing,javax.swing.border,javax.swing.event,org.apa
+ che.commons.lang3,org.apache.commons.lang3.stream
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt=N
+ OTICE.txt
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-6.4.1.202306080939
+Multi-Release: true
+
