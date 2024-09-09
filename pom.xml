@@ -79,6 +79,7 @@
                     <directory>src/main/resources</directory>
                     <includes>
                         <includes>binding.xml</includes>
+                        <includes>HotelSettingUpdateRS-binding.xml</includes>
                     </includes>
                     <verbose>true</verbose>
                 </configuration>

@@ -1,13 +1,12 @@
 package org.example;
 
-import org.jibx.runtime.IBindingFactory;
-import org.jibx.runtime.IUnmarshallingContext;
-import org.jibx.runtime.JiBXException;
-import org.jibx.runtime.BindingDirectory;
+import org.jibx.runtime.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.StringReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -67,6 +66,31 @@ public class Main {
                 System.out.print(setting.getSettingName() + "\t");
                 System.out.print(setting.getSettingID() + "\t");
                 System.out.println(setting.isSettingValue() + "\t");
+            }
+
+            // code for creation of response xml file starts from here
+            HotelSettingUpdateRS hotelSettingUpdateRS = new HotelSettingUpdateRS();
+            hotelSettingUpdateRS.setHotelID(hotelSettingUpdateRQ.getHotelID());
+
+            List<SettingRS> settingsRSList = new ArrayList<>();
+            for (Setting setting: settingsList){
+                SettingRS settingRS = new SettingRS();
+                settingRS.setSettingID(setting.getSettingID());
+                settingRS.setSettingStatus(true);
+                settingsRSList.add(settingRS);
+            }
+            hotelSettingUpdateRS.setSettings(settingsRSList);
+
+            try {
+                IBindingFactory bfact = BindingDirectory.getFactory(HotelSettingUpdateRS.class);
+                IMarshallingContext mctx = bfact.createMarshallingContext();
+
+                FileOutputStream fos = new FileOutputStream("src/main/resources/HotelSettingUpdateRS.xml");
+                mctx.setIndent(2);  // Set indentation for pretty printing
+                mctx.marshalDocument(hotelSettingUpdateRS, "UTF-8", null, fos);
+                System.out.println("XML generated successfully.");
+            } catch (JiBXException | IOException e) {
+                e.printStackTrace();
             }
 
         } catch (JiBXException | FileNotFoundException e) {

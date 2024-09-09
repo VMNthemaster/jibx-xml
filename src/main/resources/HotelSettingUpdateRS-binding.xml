@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding>
+    <mapping name="HotelSettingUpdateRS" class="org.example.HotelSettingUpdateRS">
+        <value style="element" name="HotelID" field="hotelID"/>
+        <collection field="settings" get-method="getSettings" set-method="setSettings"
+                    item-type="org.example.SettingRS" label="Settings"/>
+    </mapping>
+
+    <mapping name="Setting" class="org.example.SettingRS">
+        <value style="element" name="SettingID" field="settingID"/>
+        <value style="element" name="SettingStatus" field="settingStatus"/>
+    </mapping>
+</binding>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HotelSettingUpdateRS>
+  <HotelID>1098</HotelID>
+  <Setting>
+    <SettingID>1</SettingID>
+    <SettingStatus>true</SettingStatus>
+  </Setting>
+  <Setting>
+    <SettingID>2</SettingID>
+    <SettingStatus>true</SettingStatus>
+  </Setting>
+</HotelSettingUpdateRS>
