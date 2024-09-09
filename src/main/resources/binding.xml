@@ -1,6 +1,21 @@
 <binding>
-    <mapping name="person" class="org.example.Person">
-        <value name="name" field="name" style="element"/>
-        <value name="age" field="age" style="element"/>
+    <!-- Root mapping for HotelSettingUpdateRQ -->
+    <mapping name="HotelSettingUpdateRQ" class="org.example.HotelSettingUpdateRQ">
+        <value style="element" field="HotelID" name="HotelID" usage="optional"/>
+        <structure field="settings"/>
+    </mapping>
+
+    <!-- Mapping for Settings class -->
+    <mapping name="Settings" class="org.example.Settings">
+        <collection field="settingList" item-type="org.example.Setting" usage="optional">
+            <structure/>
+        </collection>
+    </mapping>
+
+    <!-- Mapping for individual Setting -->
+    <mapping name="Setting" class="org.example.Setting">
+        <value style="element" field="settingName" name="SettingName"/>
+        <value style="element" field="settingID" name="SettingID"/>
+        <value style="element" field="settingValue" name="SettingValue"/>
     </mapping>
 </binding>

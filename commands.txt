@@ -1,0 +1,5 @@
+mvn clean install compile
+
+mvn jibx:bind  
+
+run main file then
